@@ -17,7 +17,4 @@ TESTS=`cat ${TESTS_TO_RUN_FILE}| sed -Ez '$ s/\n+$//' | tr '\n' "|"`
 --csi.secrets ${SECRET_FILE} \
 --csi.testvolumeparameters ${PARAM_FILE} \
 --csi.junitfile ${JUNIT_OUTPUT} \
---ginkgo.v \
---ginkgo.debug \
---ginkgo.focus "${TESTS}"
-
+--ginkgo.focus ${TESTS}
